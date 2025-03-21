@@ -22,7 +22,7 @@ app.use(
 app.use(morgan("dev"))
 app.use(morgan("combined", { stream: logStream }));
 
-app.route("/api/auth",authRouter)
+app.use("/api/auth",authRouter)
 
 app.use(express.json())
 const PORT = process.env.PORT || 3000;
